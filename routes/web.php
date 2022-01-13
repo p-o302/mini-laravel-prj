@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TodosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('Category', function ($id) {
-    
-});
+// Route::get('category',[CategoryController::class, 'index'])->name('admin.category');
+
+
+
+Route::get('/todos',[TodosController::class,'index']);
